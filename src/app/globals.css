@@ -1,0 +1,29 @@
+
+.input-wrapper{
+    margin: 10px;   
+}
+/* .button{
+    width: 200px;
+    height: 30px;
+} */
+.input-field{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+.container{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.button-link{
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: skyblue;
+    margin-bottom: 20px;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

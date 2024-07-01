@@ -1,0 +1,20 @@
+Food Delivery App
+Where Customers can order food
+Restaurant owners can register
+Delivery Boy can register himself
+Customers can see the order list
+Customers can give reviews
+The delivery partner will also be assigned.
+
+Signup and Login for Restaurants
+Connect App with Database
+Add, Remove, and Update Food Items from restaurants.
+UI for restaurant search and web app front page.
+Food items list and restaurant list for users
+Add to cart food items.
+User login and signup.
+Order food.
+Delivery partner assigned to deliver food
+Order list for customer
+Review restaurant
+Auto-detect location
