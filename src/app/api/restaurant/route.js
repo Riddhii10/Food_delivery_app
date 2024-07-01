@@ -7,12 +7,6 @@ export async function GET(){
     await mongoose.connect(connectionStr,{useNewUrlParser:true})
     const data=await restaurantSchema.find()
     console.log(data)
-    .try(()=>{
-        console.log("connected")
-    })
-    .catch(()=>{
-        console.log("not connected")
-        console.log(error)
-    })
-    return NextResponse.json({result:true})
+
+    return NextResponse.json({result:data})
 }
