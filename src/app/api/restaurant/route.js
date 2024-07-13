@@ -11,12 +11,33 @@ export async function GET(){
     return NextResponse.json({result:data})
 }
 
+// signup mai using 
 export async function POST(request){
     let payload=await request.json();
     await mongoose.connect(connectionStr,{useNewUrlParser:true})
-    const restaurant=new restaurantSchema(payload)
-    const result= await restaurant.save()
+    let result;
+    let success=false;
+    if(payload.login){
+        // use it for login
+        result=await restaurantSchema.findOne({email:payload.email,password:payload.password})
+        if(result){
+            success=true
+        }
+    }
+    else{
+        // use it for signup 
+        const restaurant=new restaurantSchema(payload)
+        result= await restaurant.save()
+        if (result){
+            succes=true;
+        }
+    }
+    
+    
     // console.log(payload)
     // return NextResponse.json({result:true})
-    return NextResponse.json({result,success:true})
+    return NextResponse.json({result,success})
 }
+
+
+// can create only 1 get , 1 post 
