@@ -13,7 +13,9 @@ const RestaurantHeader = () => {
 
     useEffect(()=>{
         let data=localStorage.getItem("restaurantUser");
-        if(!data){
+        console.log('pathname: ',pathName)
+        console.log("data : ",data)
+        if(!data && pathName=="/restaurant/dashboard"){
             router.push("/restaurant")
         }
         else if(data && pathName=="/restaurant"){
@@ -22,7 +24,12 @@ const RestaurantHeader = () => {
         else{
             setDetails(JSON.parse(data))
         }
-    })
+    },[])
+
+    const logout=()=>{
+        localStorage.removeItem("restaurantUser");
+        router.push("/restaurant")
+    }
   return (
     <div className='header-wrapper'>
         <div className='logo'>
@@ -35,7 +42,7 @@ const RestaurantHeader = () => {
             {
                 details && details.name?
                 <>
-                    <li><button>Logout</button></li>
+                    <li><button onClick={logout}>Logout</button></li>
                     <li><Link href={"/"}>Profile</Link></li>
                 </>
                 :
