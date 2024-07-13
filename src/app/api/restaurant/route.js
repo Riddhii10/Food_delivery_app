@@ -29,7 +29,7 @@ export async function POST(request){
         const restaurant=new restaurantSchema(payload)
         result= await restaurant.save()
         if (result){
-            succes=true;
+            success=true;
         }
     }
     

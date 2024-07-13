@@ -33,7 +33,7 @@ const RestaurantHeader = () => {
   return (
     <div className='header-wrapper'>
         <div className='logo'>
-            <Image src={assets.logo} className='logo-img'/>
+            <Image src={assets.logo} className='logo-img' alt=''/>
         </div>
         <ul >
             <li>
